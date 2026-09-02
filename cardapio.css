@@ -1,60 +1,81 @@
-#nome-restaurante {
-    text-align: center;
-    background: linear-gradient(135deg, #4a154b, #6b114d);
-    color: #ffffff;
-    padding: 50px 20px;
-    margin-top: 0;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+:root {
+  --primary-gradient: linear-gradient(135deg, #4a154b, #6b114d);
+  --primary-color: #6b114d;
+  --text-dark: #2c3e50;
+  --text-light: #ffffff;
+  --bg-card: #ffffff;
+  --border-color: #edf2f7;
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 20px rgba(107, 17, 77, 0.08);
+}
+
+.nome-restaurante {
+  font-family: var(--font-main);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-align: center;
+  letter-spacing: 1.5px;
+  background: var(--primary-gradient);
+  padding: 60px 20px;
+  margin-top: 0;
+  box-shadow: var(--shadow-md);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .categoria {
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 0 20px 25px 20px;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-main);
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px 25px 20px;
 }
 
 .categoria h2 {
-    color: #2c3e50;
-    font-size: 1.8rem;
-    position: relative;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .categoria h2::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background-color: #6b114d;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
 }
 
 .categoria ul {
-    padding-left: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .item-menu {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 16px;
-    border: 1px solid #edf2f7;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--bg-card);
+  padding: 24px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .item-menu:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(107, 17, 77, 0.15);
 }
