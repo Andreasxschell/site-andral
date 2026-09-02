@@ -1,32 +1,60 @@
- #nome-restaurante {
-     text-align: center;
-     background-color: #ff00ff;
-     color: #ffffff;
-     padding: 35px;
-     margin-top: 0;
-     font-family: Arial, sans-serif;
- }
- 
- .categoria {
-     margin-bottom: 45px;
-     border-bottom: 3px double #ddd;
-     padding-bottom: 15px;
-     font-family: Arial, sans-serif;
- }
- 
- .categoria h2 {
-     color: #2c3e50;
- }
- 
- .categoria ul {
-     padding-left: 0;
-     list-style-type: none;
- }
- 
- .item-menu {
-     margin-bottom: 15px;
-     background-color: #f8f9fa;
-     padding: 15px;
-     border-radius: 6px;
-     font-size: 16px;
- }
+#nome-restaurante {
+    text-align: center;
+    background: linear-gradient(135deg, #4a154b, #6b114d);
+    color: #ffffff;
+    padding: 50px 20px;
+    margin-top: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categoria {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 0 20px 25px 20px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.categoria h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.categoria h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #6b114d;
+}
+
+.categoria ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
